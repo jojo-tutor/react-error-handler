@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/jojo-tutor/react-error-boundary.git"
+    "url": "git+ssh://git@github.com/jojo-tutor/react-error-handler.git"
   },
   "keywords": [
     "react",
