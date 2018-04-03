@@ -1,0 +1,38 @@
+{
+  "env": {
+    "commonjs": {
+      "plugins": [
+        "transform-object-assign"
+      ],
+      "presets": [
+        "es2015",
+        "react",
+        "stage-1"
+      ]
+    },
+    "es": {
+      "plugins": [
+        "transform-runtime",
+        "transform-object-assign"
+      ],
+      "presets": [
+        "es2015-rollup",
+        "react",
+        "stage-1"
+      ]
+    },
+    "production": {
+      "comments": false,
+      "compact": true,
+      "plugins": [
+        "transform-runtime",
+        "transform-object-assign"
+      ],
+      "presets": [
+        "es2015",
+        "react",
+        "stage-1"
+      ]
+    }
+  }
+}
