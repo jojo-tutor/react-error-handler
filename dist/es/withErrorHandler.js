@@ -4,6 +4,7 @@ import _createClass from 'babel-runtime/helpers/createClass';
 import _possibleConstructorReturn from 'babel-runtime/helpers/possibleConstructorReturn';
 import _inherits from 'babel-runtime/helpers/inherits';
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 function withErrorHandler(ChildComponent) {
   return function (_PureComponent) {
@@ -29,17 +30,13 @@ function withErrorHandler(ChildComponent) {
       key: 'componentDidCatch',
       value: function componentDidCatch(error, info) {
         this.setState({ hasError: true });
-        console.error(error, info);
+        this.props.onError(error, info);
       }
     }, {
       key: 'render',
       value: function render() {
         if (this.state.hasError) {
-          return React.createElement(
-            'h1',
-            null,
-            'Oh no, Something went wrong! :('
-          );
+          return this.props.errorElement;
         }
         return React.createElement(ChildComponent, this.props);
       }
@@ -48,5 +45,19 @@ function withErrorHandler(ChildComponent) {
     return _class2;
   }(PureComponent);
 }
+
+withErrorHandler.defaultProps = {
+  onError: function onError() {},
+  errorElement: React.createElement(
+    'h1',
+    null,
+    'Oh no, Something went wrong! :( '
+  )
+};
+
+withErrorHandler.propTypes = {
+  onError: PropTypes.func,
+  errorElement: PropTypes.element
+};
 
 export default withErrorHandler;

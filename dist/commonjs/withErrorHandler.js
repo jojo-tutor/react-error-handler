@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42,17 +46,13 @@ function withErrorHandler(ChildComponent) {
       key: 'componentDidCatch',
       value: function componentDidCatch(error, info) {
         this.setState({ hasError: true });
-        console.error(error, info);
+        this.props.onError(error, info);
       }
     }, {
       key: 'render',
       value: function render() {
         if (this.state.hasError) {
-          return _react2.default.createElement(
-            'h1',
-            null,
-            'Oh no, Something went wrong! :('
-          );
+          return this.props.errorElement;
         }
         return _react2.default.createElement(ChildComponent, this.props);
       }
@@ -61,5 +61,19 @@ function withErrorHandler(ChildComponent) {
     return _class2;
   }(_react.PureComponent);
 }
+
+withErrorHandler.defaultProps = {
+  onError: function onError() {},
+  errorElement: _react2.default.createElement(
+    'h1',
+    null,
+    'Oh no, Something went wrong! :( '
+  )
+};
+
+withErrorHandler.propTypes = {
+  onError: _propTypes2.default.func,
+  errorElement: _propTypes2.default.element
+};
 
 exports.default = withErrorHandler;
