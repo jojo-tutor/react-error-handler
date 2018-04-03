@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 function withErrorHandler(ChildComponent) {
   return class extends PureComponent {
@@ -7,15 +8,25 @@ function withErrorHandler(ChildComponent) {
     }
     componentDidCatch(error, info) {
       this.setState({ hasError: true })
-      console.error(error, info)
+      this.props.onError(error, info)
     }
     render() {
       if (this.state.hasError) {
-        return (<h1>Oh no, Something went wrong! :(</h1>)
+        return this.props.errorElement
       }
       return (<ChildComponent {...this.props} />)
     }
   }
+}
+
+withErrorHandler.defaultProps = {
+  onError: () => {},
+  errorElement: (<h1>Oh no, Something went wrong! :( </h1>)
+}
+
+withErrorHandler.propTypes = {
+  onError: PropTypes.func,
+  errorElement: PropTypes.element
 }
 
 export default withErrorHandler
