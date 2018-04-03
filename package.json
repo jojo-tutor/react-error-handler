@@ -4,12 +4,14 @@
   "description": "A higher order function that handles error boundary in React 16+ components. No additional dependecies needed!",
   "main": "dist/commonjs/index.js",
   "scripts": {
-    "build": "npm run build:commonjs && npm run build:es && npm run build:umd",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:amd",
     "build:commonjs": "npm run clean:commonjs && cross-env NODE_ENV=production cross-env BABEL_ENV=commonjs babel src --out-dir dist/commonjs",
     "build:es": "npm run clean:es && cross-env NODE_ENV=production cross-env BABEL_ENV=es babel src --out-dir dist/es",
+    "build:amd": "npm run clean:amd && cross-env NODE_ENV=production cross-env BABEL_ENV=amd babel src --out-dir dist/amd",
     "build:umd": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "clean:commonjs": "rimraf dist/commonjs",
     "clean:es": "rimraf dist/es",
+    "clean:amd": "rimraf dist/amd",
     "clean:umd": "rimraf dist/umd",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -38,6 +40,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-amd": "^6.24.1",
     "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
