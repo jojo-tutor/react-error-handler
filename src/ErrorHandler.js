@@ -18,13 +18,13 @@ class ErrorHandler extends PureComponent {
 }
 
 ErrorHandler.defaultProps = {
-  onError: () => {},
-  errorElement: (<h1>Oh no, Something went wrong! :( </h1>)
+  errorElement: (<h1>Oh no, Something went wrong! :( </h1>),
+  onError: () => {}
 }
 
 ErrorHandler.propTypes = {
-  onError: PropTypes.func,
-  errorElement: PropTypes.element
+  errorElement: PropTypes.element,
+  onError: PropTypes.func
 }
 
 export default ErrorHandler

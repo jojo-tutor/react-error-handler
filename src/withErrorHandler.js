@@ -1,8 +1,12 @@
 import React from 'react'
 import ErrorHandler from './ErrorHandler'
 
-const withErrorHandler = (ChildComponent, onError, errorElement) => props => (
-  <ErrorHandler onError={onError} errorElement={errorElement}>
+const withErrorHandler = (
+  ChildComponent,
+  errorElement,
+  onError
+) => props => (
+  <ErrorHandler errorElement={errorElement} onError={onError}>
     <ChildComponent {...props} />
   </ErrorHandler>
 )
