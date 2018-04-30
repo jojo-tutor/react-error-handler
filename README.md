@@ -26,7 +26,7 @@ Herokuapp:
 
 ## To run the Example on local
 ```
-git clone git@github.com:jojo-tutor/hoc-error-boundary.git
+git clone https://github.com/jojo-tutor/hoc-error-boundary.git
 cd hoc-error-boundary
 npm i
 npm start
