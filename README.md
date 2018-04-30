@@ -7,6 +7,13 @@ A higher order function that handles error boundary in React 16+ components. No 
 ## About
 A component wrapper to handle error handling within a child component.
 
+## Installing
+To install the module:
+
+```
+npm i react-error-handler --save
+```
+
 ## Demonstration
 CodePen:
  > https://codepen.io/jojo-tutor/pen/GxOemZ
@@ -14,11 +21,15 @@ CodePen:
 Herokuapp:
  > https://hoc-error-boundary.herokuapp.com
 
-## Installing
-To install the module:
+## Example
+ > https://github.com/jojo-tutor/hoc-error-boundary
 
+## To run the Example on local
 ```
-npm i react-error-handler --save
+git clone git@github.com:jojo-tutor/hoc-error-boundary.git
+cd hoc-error-boundary
+npm i
+npm start
 ```
 
 ## Usage
