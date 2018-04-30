@@ -12,7 +12,7 @@ CodePen:
  > https://codepen.io/jojo-tutor/pen/GxOemZ
 
 Herokuapp:
- > https://component-vs-purecomponent.herokuapp.com/
+ > https://hoc-error-boundary.herokuapp.com
 
 ## Installing
 To install the module, follow the steps below:
