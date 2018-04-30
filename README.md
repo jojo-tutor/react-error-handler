@@ -24,6 +24,7 @@ npm i react-error-handler --save
 ## Usage
 Ex. 1:
 ```
+import { ErrorHandler } from 'react-error-handler';
 <ErrorHandler onError={(error, info) => console.log(error, info)} errorElement={<div>I'm custom error element!</div>}>
     <WrappedComponent />
 </ErrorHandler>
@@ -32,7 +33,7 @@ Ex. 1:
 Ex. 2:
 ```
 import React, { Component } from 'react';
-import withErrorHandler from './withErrorHandler';
+import { withErrorHandler } from 'react-error-handler';
 
 class Example2 extends Component {
   render() {
@@ -47,13 +48,12 @@ export default withErrorHandler(Example2);
 Ex. 3
 ```
 import React, { Component } from 'react';
-import withErrorHandler from './withErrorHandler';
+import { withErrorHandler } from 'react-error-handler';
 
 const FunctionalComponent1 = (props) => {
   return (
     <div>
-      <div className='title'>Functional Component 1</div>
-      <p className='description'>This will throw an error when Counter is >= 1.</p>
+      Example 3
     </div>)
 }
 
@@ -62,7 +62,7 @@ class About extends Component {
     const WrappedFunctional1 = withErrorHandler(FunctionalComponent1)
     return (
       <div className='example3'>
-        <WrappedFunctional1 counter={counter} />
+        <WrappedFunctional1 />
       </div>
     );
   }
