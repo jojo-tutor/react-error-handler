@@ -15,7 +15,7 @@ Herokuapp:
  > https://hoc-error-boundary.herokuapp.com
 
 ## Installing
-To install the module, follow the steps below:
+To install the module:
 
 ```
 npm i react-error-handler --save
