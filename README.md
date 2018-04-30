@@ -15,13 +15,58 @@ Herokuapp:
  > https://component-vs-purecomponent.herokuapp.com/
 
 ## Installing
-To run app, follow the steps below:
+To install the module, follow the steps below:
 
 ```
-git clone https://github.com/jojo-tutor/react-component-vs-purecomponent.git
-cd react-component-vs-purecomponent
-npm i
-npm start
+npm i react-error-handler --save
+```
+
+## Usage
+Ex. 1:
+```
+<ErrorHandler onError={(error, info) => console.log(error, info)} errorElement={<div>I'm custom error element!</div>}>
+    <WrappedComponent />
+</ErrorHandler>
+```
+
+Ex. 2:
+```
+import React, { Component } from 'react';
+import withErrorHandler from './withErrorHandler';
+
+class Example2 extends Component {
+  render() {
+    return (
+      <div>Example 2</div>
+    );
+  }
+}
+export default withErrorHandler(Example2);
+```
+
+Ex. 3
+```
+import React, { Component } from 'react';
+import withErrorHandler from './withErrorHandler';
+
+const FunctionalComponent1 = (props) => {
+  return (
+    <div>
+      <div className='title'>Functional Component 1</div>
+      <p className='description'>This will throw an error when Counter is >= 1.</p>
+    </div>)
+}
+
+class About extends Component {
+  render() {
+    const WrappedFunctional1 = withErrorHandler(FunctionalComponent1)
+    return (
+      <div className='example3'>
+        <WrappedFunctional1 counter={counter} />
+      </div>
+    );
+  }
+}
 ```
 
 ## Authors
