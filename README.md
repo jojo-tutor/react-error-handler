@@ -25,7 +25,11 @@ npm i react-error-handler --save
 Ex. 1:
 ```
 import { ErrorHandler } from 'react-error-handler';
-<ErrorHandler onError={(error, info) => console.log(error, info)} errorElement={<div>I'm custom error element!</div>}>
+
+<ErrorHandler
+    onError={(error, info) => console.log(error, info)}
+    errorElement={<div>I'm custom error element!</div>}
+>
     <WrappedComponent />
 </ErrorHandler>
 ```
