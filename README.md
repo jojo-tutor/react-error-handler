@@ -1,6 +1,9 @@
 # react-error-handler
 ![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg)
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
+![npm](https://img.shields.io/npm/v/react-error-handler.svg)
+![npm](https://img.shields.io/npm/dm/react-error-handler.svg)
+
 
 A higher order function that handles error boundary in React 16+ components. No additional dependecies needed!
 
