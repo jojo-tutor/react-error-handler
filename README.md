@@ -6,7 +6,7 @@
 ![npm](https://img.shields.io/npm/dm/react-error-handler.svg)
 
 
-A higher order function that handles error boundary in React 16+ components. No additional dependecies needed!
+A higher order function that handles error boundary in React 16+ components. No additional module dependecies needed!
 
 ## About
 A component wrapper to handle error handling within a child component.
