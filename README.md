@@ -1,5 +1,4 @@
-# react-error-handler 
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/jojo-tutor/react-error-handler.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fjojo-tutor%2Freact-error-handler)
+# react-error-handler [![Twitter](https://img.shields.io/twitter/url/https/github.com/jojo-tutor/react-error-handler.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fjojo-tutor%2Freact-error-handler)
 
 ![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg)
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
