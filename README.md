@@ -37,7 +37,7 @@ npm start
 
 ## Usage
 Ex. 1:
-```react
+```jsx
 import { ErrorHandler } from 'react-error-handler';
 
 <ErrorHandler
@@ -49,7 +49,7 @@ import { ErrorHandler } from 'react-error-handler';
 ```
 
 Ex. 2:
-```react
+```jsx
 import React, { Component } from 'react';
 import { withErrorHandler } from 'react-error-handler';
 
@@ -64,7 +64,7 @@ export default withErrorHandler(Example2);
 ```
 
 Ex. 3
-```react
+```jsx
 import React, { Component } from 'react';
 import { withErrorHandler } from 'react-error-handler';
 
