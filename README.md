@@ -41,7 +41,7 @@ Ex. 1:
 import { ErrorHandler } from 'react-error-handler';
 
 <ErrorHandler
-    onError={(error, info) => console.log(error, info)}
+    onError={(error, info) => this.handleError}
     errorElement={<div>I'm custom error element!</div>}
 >
     <WrappedComponent />
