@@ -1,6 +1,5 @@
 # react-error-handler [![Twitter](https://img.shields.io/twitter/url/https/github.com/jojo-tutor/react-error-handler.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fjojo-tutor%2Freact-error-handler)
 
-![Wercker](https://img.shields.io/wercker/ci/wercker/docs.svg)
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
 ![npm](https://img.shields.io/npm/v/react-error-handler.svg)
 ![npm](https://img.shields.io/npm/dm/react-error-handler.svg)
@@ -38,7 +37,7 @@ npm start
 
 ## Usage
 Ex. 1:
-```
+```react
 import { ErrorHandler } from 'react-error-handler';
 
 <ErrorHandler
@@ -50,7 +49,7 @@ import { ErrorHandler } from 'react-error-handler';
 ```
 
 Ex. 2:
-```
+```react
 import React, { Component } from 'react';
 import { withErrorHandler } from 'react-error-handler';
 
@@ -65,7 +64,7 @@ export default withErrorHandler(Example2);
 ```
 
 Ex. 3
-```
+```react
 import React, { Component } from 'react';
 import { withErrorHandler } from 'react-error-handler';
 
@@ -76,9 +75,9 @@ const FunctionalComponent1 = (props) => {
     </div>)
 }
 
+const WrappedFunctional1 = withErrorHandler(FunctionalComponent1)
 class About extends Component {
   render() {
-    const WrappedFunctional1 = withErrorHandler(FunctionalComponent1)
     return (
       <div className='example3'>
         <WrappedFunctional1 />
